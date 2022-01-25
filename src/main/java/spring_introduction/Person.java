@@ -15,16 +15,18 @@ public class Person {
     @Value("${person.age}")
     private int Age;
 
-    @Autowired
-    public Person(@Qualifier("catBean") Pet pet) {
-        this.pet = pet;
-        System.out.println("Person bean is created");
-    }
-
-//    public Person() {
+//    @Autowired
+//    public Person(@Qualifier("catBean") Pet pet) {
+//        this.pet = pet;
 //        System.out.println("Person bean is created");
 //    }
 
+
+    public Person(Pet pet) {
+        System.out.println("Person bean is created");
+        this.pet = pet;
+
+    }
 
     //    @Autowired
 //    @Qualifier("dog")
