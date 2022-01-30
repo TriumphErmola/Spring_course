@@ -2,16 +2,18 @@ package aop;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class Test1 {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test2 {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(MyConfig.class);
-        UniLibrary uniLibrary = context.getBean("uniLibrary", UniLibrary.class);
-        Book book = context.getBean("book", Book.class);
-        uniLibrary.getBook();
-        uniLibrary.addBook("Andrey", book);
-        uniLibrary.addMagazine();
 
+        University university = context.getBean("university", University.class);
+        university.addStudents();
+        List<Student> students = university.getStudents();
+        System.out.println(students);
         context.close();
 
     }
