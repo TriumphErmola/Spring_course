@@ -1,6 +1,4 @@
-package hibernate_test2.Entity;
-
-import org.hibernate.annotations.GeneratorType;
+package hibernate_one_to_one.Entity;
 
 import javax.persistence.Entity;
 import javax.persistence.*;
