@@ -35,7 +35,7 @@ public class Test1 {
 //            session = factory.getCurrentSession();
 //
 //            session.beginTransaction();
-//            Department department = session.get(Department.class, 1);
+//            Department department = session.get(Department.class, 8);
 //            System.out.println(department);
 //            System.out.println(department.getEmps());
 //
@@ -43,25 +43,21 @@ public class Test1 {
 //            System.out.println("Успешное выполнение");
 //*******************************************************
 //            session = factory.getCurrentSession();
-//
 //            session.beginTransaction();
-//            Employee employee = session.get(Employee.class, 1);
+//            Employee employee = session.get(Employee.class, 8);
 //            System.out.println(employee);
 //            System.out.println(employee.getDepartment());
-//
 //            session.getTransaction().commit();
 //            System.out.println("Успешное выполнение");
 //*******************************************************
-//            session = factory.getCurrentSession();
-//            session.beginTransaction();
+            session = factory.getCurrentSession();
+            session.beginTransaction();
 //            Employee employee = session.get(Employee.class, 4);
 //            session.delete(employee);
-//            Department deparment = session.get(Department.class,9);
-//            session.delete(deparment);
-//            session.getTransaction().commit();
-//            System.out.println("Успешное выполнение");
-
-
+            Department deparment = session.get(Department.class,8);
+            session.delete(deparment);
+            session.getTransaction().commit();
+            System.out.println("Успешное выполнение");
         } finally {
             session.close();
             factory.close();
