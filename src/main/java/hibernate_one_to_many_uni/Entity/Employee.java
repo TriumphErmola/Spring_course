@@ -1,4 +1,4 @@
-package hibernate_one_to_many_uni.entity;
+package hibernate_one_to_many_uni.Entity;
 
 import javax.persistence.*;
 
@@ -57,13 +57,6 @@ public class Employee {
         this.salary = salary;
     }
 
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
-    }
 
     @Override
     public String toString() {
