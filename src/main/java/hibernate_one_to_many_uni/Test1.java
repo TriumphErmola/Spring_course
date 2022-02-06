@@ -1,7 +1,6 @@
 package hibernate_one_to_many_uni;
 
 
-
 import hibernate_one_to_many_uni.Entity.Department;
 import hibernate_one_to_many_uni.Entity.Employee;
 import org.hibernate.Session;
@@ -19,19 +18,19 @@ public class Test1 {
                 .buildSessionFactory();
         Session session = null;
         try {
-            session = factory.getCurrentSession();
-
-            Department dep = new Department("HR",100,900);
-            Employee emp1 = new Employee("asdasdasd","dasdas",900);
-            Employee emp2 = new Employee("adgdfs","fafas",700);
-            dep.addEmployeeToDepartment(emp1);
-            dep.addEmployeeToDepartment(emp2);
-
-            session.beginTransaction();
-            session.save(dep);
-
-            session.getTransaction().commit();
-            System.out.println("Успешное выполнение");
+//            session = factory.getCurrentSession();
+//
+//            Department dep = new Department("HR",500,1000);
+//            Employee emp1 = new Employee("Andrey","Ermolenko",1500);
+//            Employee emp2 = new Employee("Viktoria","Ivanova",500);
+//            dep.addEmployeeToDepartment(emp1);
+//            dep.addEmployeeToDepartment(emp2);
+//
+//            session.beginTransaction();
+//            session.save(dep);
+//
+//            session.getTransaction().commit();
+//            System.out.println("Успешное выполнение");
 //*******************************************************
 //            session = factory.getCurrentSession();
 //
@@ -57,7 +56,8 @@ public class Test1 {
 //            session.beginTransaction();
 //            Employee employee = session.get(Employee.class, 4);
 //            session.delete(employee);
-//
+//            Department deparment = session.get(Department.class,9);
+//            session.delete(deparment);
 //            session.getTransaction().commit();
 //            System.out.println("Успешное выполнение");
 
